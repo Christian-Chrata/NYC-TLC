@@ -1,0 +1,5 @@
+variable,correlation_with_tip_amount
+passenger_count,0.024589126427770783
+duration_min,0.02791102631900831
+trip_distance,0.3724561370555809
+fare_amount,0.38290131040852515

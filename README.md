@@ -2,7 +2,7 @@
 
 **Maximizing Taxi Earnings Through Data-Driven Insights**
 
-![dashboard](./input/images/dashboard.gif)
+![dashboard](./images/dashboard.gif)
 
 ## 📊 Project Overview
 
@@ -40,7 +40,7 @@ This project explores over 60,000 NYC taxi trips to uncover patterns in earnings
 
 ## 📽️ Presentation
 
-![presentation](./input/images//presentation.gif)
+![presentation](./images//presentation.gif)
 
 ---
 

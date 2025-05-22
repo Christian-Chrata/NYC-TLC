@@ -15,18 +15,6 @@ This project explores over 60,000 NYC taxi trips to uncover patterns in earnings
 * Detect inefficient trips with high time/low returns
 * Compare trip profitability by payment method and tip segment
 
-## 📁 Project Structure
-
-```
-NYC-TLC/
-├── data/                # Cleaned dataset
-├── notebooks/           # Jupyter notebooks with EDA & modeling
-├── images/              # Static graphs used in dashboard and presentation
-├── dashboard.gif        # Interactive Tableau dashboard recording
-├── presentation.gif     # Slide presentation walkthrough
-├── README.md
-```
-
 ## 🔍 Key Insights
 
 | 🔹 Focus Area                | 🔍 Insight                                                              |
@@ -41,7 +29,8 @@ NYC-TLC/
 * Python (Pandas, Matplotlib, Seaborn)
 * Tableau (Dashboard)
 * Jupyter Notebook
-* Excel (pre-cleaning)
+* Canva
+
 
 ## 🗂️ Dataset
 

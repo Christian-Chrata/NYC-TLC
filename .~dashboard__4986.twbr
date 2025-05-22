@@ -1,0 +1,2453 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750?rev=1.3' id='dashboard_17478919356260' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='3_efficiency' inline='true' name='federated.1tghnyf0btia3q1fl42610wbxiwx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='3_efficiency' name='textscan.1tb3u0s0y9rwol1arxbxc0924kpq'>
+            <connection class='textscan' directory='/Users/chrata/Documents/Git_Clone/NYC-TLC/output' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1tb3u0s0y9rwol1arxbxc0924kpq' name='3_efficiency.csv' table='[3_efficiency#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='pickup_location' ordinal='0' />
+            <column datatype='integer' name='hour' ordinal='1' />
+            <column datatype='real' name='low_eff_rate' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[3_efficiency.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pickup_location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pickup_location]</local-name>
+            <parent-name>[3_efficiency.csv]</parent-name>
+            <remote-alias>pickup_location</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[3_efficiency.csv_5EFBCCF70C134C95A0EEF56D1560A414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour]</local-name>
+            <parent-name>[3_efficiency.csv]</parent-name>
+            <remote-alias>hour</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[3_efficiency.csv_5EFBCCF70C134C95A0EEF56D1560A414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_eff_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_eff_rate]</local-name>
+            <parent-name>[3_efficiency.csv]</parent-name>
+            <remote-alias>low_eff_rate</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[3_efficiency.csv_5EFBCCF70C134C95A0EEF56D1560A414]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='3_efficiency.csv' datatype='table' name='[__tableau_internal_object_id__].[3_efficiency.csv_5EFBCCF70C134C95A0EEF56D1560A414]' role='measure' type='quantitative' />
+      <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+      <column caption='Low Eff Rate' datatype='real' name='[low_eff_rate]' role='dimension' type='ordinal' />
+      <column caption='Pickup Location' datatype='string' name='[pickup_location]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Extracts/federated_1tghnyf0btia3q1fl42610.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username=''>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>pickup_location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[pickup_location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_location</remote-alias>
+              <ordinal>0</ordinal>
+              <family>3_efficiency.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour</remote-alias>
+              <ordinal>1</ordinal>
+              <family>3_efficiency.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>low_eff_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[low_eff_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>low_eff_rate</remote-alias>
+              <ordinal>2</ordinal>
+              <family>3_efficiency.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>83</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='3_efficiency.csv' id='3_efficiency.csv_5EFBCCF70C134C95A0EEF56D1560A414'>
+            <properties context=''>
+              <relation connection='textscan.1tb3u0s0y9rwol1arxbxc0924kpq' name='3_efficiency.csv' table='[3_efficiency#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='pickup_location' ordinal='0' />
+                  <column datatype='integer' name='hour' ordinal='1' />
+                  <column datatype='real' name='low_eff_rate' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='2_tipCorr' inline='true' name='federated.039zd1o08g8kv81gxqd1m1mfs3a7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='2_tipCorr' name='textscan.13d7db01ixutko0zl4u2q07wj872'>
+            <connection class='textscan' directory='/Users/chrata/Documents/Git_Clone/NYC-TLC/output' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.13d7db01ixutko0zl4u2q07wj872' name='2_tipCorr.csv' table='[2_tipCorr#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='variable' ordinal='0' />
+            <column datatype='real' name='correlation_with_tip_amount' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2_tipCorr.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>variable</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[variable]</local-name>
+            <parent-name>[2_tipCorr.csv]</parent-name>
+            <remote-alias>variable</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[2_tipCorr.csv_F31F89A98E774431BAF3DEF5EEBC669B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>correlation_with_tip_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[correlation_with_tip_amount]</local-name>
+            <parent-name>[2_tipCorr.csv]</parent-name>
+            <remote-alias>correlation_with_tip_amount</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[2_tipCorr.csv_F31F89A98E774431BAF3DEF5EEBC669B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='2_tipCorr.csv' datatype='table' name='[__tableau_internal_object_id__].[2_tipCorr.csv_F31F89A98E774431BAF3DEF5EEBC669B]' role='measure' type='quantitative' />
+      <column datatype='string' name='[variable]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;duration_min&quot;' value='Trip duration' />
+          <alias key='&quot;fare_amount&quot;' value='Fare amount' />
+          <alias key='&quot;passenger_count&quot;' value='Count of passenger' />
+          <alias key='&quot;trip_distance&quot;' value='Trip distance' />
+        </aliases>
+      </column>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_141a0vw1exkcky19w90vw11ye687.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>variable</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[variable]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>variable</remote-alias>
+              <ordinal>0</ordinal>
+              <family>2_tipCorr.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>correlation_with_tip_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[correlation_with_tip_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>correlation_with_tip_amount</remote-alias>
+              <ordinal>1</ordinal>
+              <family>2_tipCorr.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='2_tipCorr.csv' id='2_tipCorr.csv_F31F89A98E774431BAF3DEF5EEBC669B'>
+            <properties context=''>
+              <relation connection='textscan.13d7db01ixutko0zl4u2q07wj872' name='2_tipCorr.csv' table='[2_tipCorr#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='variable' ordinal='0' />
+                  <column datatype='real' name='correlation_with_tip_amount' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='1_staten_hourly' inline='true' name='federated.0vg194u1piduqb13j1ze211vjty9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='1_staten_hourly' name='textscan.0ar29rb1wqy9fv1eb3rfw0qtf2ha'>
+            <connection class='textscan' directory='/Users/chrata/Documents/Git_Clone/NYC-TLC/output' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ar29rb1wqy9fv1eb3rfw0qtf2ha' name='1_staten_hourly.csv' table='[1_staten_hourly#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='hour' ordinal='0' />
+            <column datatype='real' name='avg_earnings' ordinal='1' />
+            <column datatype='integer' name='trip_count' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[1_staten_hourly.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour]</local-name>
+            <parent-name>[1_staten_hourly.csv]</parent-name>
+            <remote-alias>hour</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[1_staten_hourly.csv_6D8E082BE30E46519A5073439AF964B9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_earnings</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_earnings]</local-name>
+            <parent-name>[1_staten_hourly.csv]</parent-name>
+            <remote-alias>avg_earnings</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[1_staten_hourly.csv_6D8E082BE30E46519A5073439AF964B9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trip_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[trip_count]</local-name>
+            <parent-name>[1_staten_hourly.csv]</parent-name>
+            <remote-alias>trip_count</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[1_staten_hourly.csv_6D8E082BE30E46519A5073439AF964B9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='1_staten_hourly.csv' datatype='table' name='[__tableau_internal_object_id__].[1_staten_hourly.csv_6D8E082BE30E46519A5073439AF964B9]' role='measure' type='quantitative' />
+      <column caption='Earnings' datatype='real' name='[avg_earnings]' role='dimension' type='ordinal' />
+      <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+      <column caption='Trip' datatype='integer' name='[trip_count]' role='measure' type='quantitative' />
+      <column-instance column='[trip_count]' derivation='Attribute' name='[attr:trip_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[avg_earnings]' derivation='Avg' name='[avg:avg_earnings:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[trip_count]' derivation='Avg' name='[avg:trip_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[trip_count]' derivation='None' name='[none:trip_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[trip_count]' derivation='Sum' name='[sum:trip_count:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_0m2ovkr14oc0xq19oakyw1km4n0u.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>hour</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour</remote-alias>
+              <ordinal>0</ordinal>
+              <family>1_staten_hourly.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_earnings</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_earnings]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_earnings</remote-alias>
+              <ordinal>1</ordinal>
+              <family>1_staten_hourly.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trip_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[trip_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>trip_count</remote-alias>
+              <ordinal>2</ordinal>
+              <family>1_staten_hourly.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#3d50c3'>
+              <bucket>&quot;[federated.0vg194u1piduqb13j1ze211vjty9].[attr:trip_count:qk]&quot;</bucket>
+            </map>
+            <map to='#3d50c3'>
+              <bucket>&quot;[federated.0vg194u1piduqb13j1ze211vjty9].[avg:trip_count:qk]&quot;</bucket>
+            </map>
+            <map to='#3d50c3'>
+              <bucket>&quot;[federated.0vg194u1piduqb13j1ze211vjty9].[none:trip_count:qk]&quot;</bucket>
+            </map>
+            <map to='#b40326'>
+              <bucket>&quot;[federated.0vg194u1piduqb13j1ze211vjty9].[avg:avg_earnings:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0vg194u1piduqb13j1ze211vjty9].[sum:trip_count:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0vg194u1piduqb13j1ze211vjty9]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='1_staten_hourly.csv' id='1_staten_hourly.csv_6D8E082BE30E46519A5073439AF964B9'>
+            <properties context=''>
+              <relation connection='textscan.0ar29rb1wqy9fv1eb3rfw0qtf2ha' name='1_staten_hourly.csv' table='[1_staten_hourly#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='hour' ordinal='0' />
+                  <column datatype='real' name='avg_earnings' ordinal='1' />
+                  <column datatype='integer' name='trip_count' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='data' inline='true' name='federated.1788to201thfi110m531d0iuwgqu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data' name='textscan.0wtth9i1oig7md1ar7ofe1553p0s'>
+            <connection class='textscan' directory='/Users/chrata/Documents/Git_Clone/NYC-TLC/output' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0wtth9i1oig7md1ar7ofe1553p0s' name='data.csv' table='[data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Trips' ordinal='0' />
+            <column datatype='string' name='pickup_location' ordinal='1' />
+            <column datatype='real' name='duration_min' ordinal='2' />
+            <column datatype='integer' name='hour' ordinal='3' />
+            <column datatype='string' name='tip_segment' ordinal='4' />
+            <column datatype='real' name='tip_amount' ordinal='5' />
+            <column datatype='real' name='fare_amount' ordinal='6' />
+            <column datatype='real' name='trip_distance' ordinal='7' />
+            <column datatype='real' name='total_amount' ordinal='8' />
+            <column datatype='real' name='earnings' ordinal='9' />
+            <column datatype='string' name='payment_type' ordinal='10' />
+            <column datatype='real' name='passenger_count' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Trips</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Trips]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Trips</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pickup_location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pickup_location]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>pickup_location</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[duration_min]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>duration_min</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>hour</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tip_segment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tip_segment]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>tip_segment</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tip_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tip_amount]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>tip_amount</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fare_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fare_amount]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>fare_amount</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trip_distance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[trip_distance]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>trip_distance</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_amount]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>total_amount</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>earnings</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[earnings]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>earnings</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payment_type]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>payment_type</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passenger_count</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[passenger_count]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>passenger_count</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_654B210A05C945A48E297C4BBD468540]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1788to201thfi110m531d0iuwgqu].[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]&quot;' value='Count of Trips' />
+          <alias key='&quot;[federated.1788to201thfi110m531d0iuwgqu].[avg:duration_min:qk]&quot;' value='Avg. Duration' />
+        </aliases>
+      </column>
+      <column datatype='string' name='[Trips]' role='dimension' type='nominal' />
+      <column caption='data.csv' datatype='table' name='[__tableau_internal_object_id__].[data.csv_654B210A05C945A48E297C4BBD468540]' role='measure' type='quantitative' />
+      <column caption='Duration Min' datatype='real' name='[duration_min]' role='dimension' type='ordinal' />
+      <column caption='Earnings' datatype='real' name='[earnings]' role='dimension' type='ordinal' />
+      <column caption='Fare Amount' datatype='real' name='[fare_amount]' role='dimension' type='ordinal' />
+      <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+      <column caption='Passenger Count' datatype='real' name='[passenger_count]' role='dimension' type='ordinal' />
+      <column caption='Payment Type' datatype='string' name='[payment_type]' role='dimension' type='nominal' />
+      <column caption='Pickup Location' datatype='string' name='[pickup_location]' role='dimension' type='nominal' />
+      <column caption='Tip Amount' datatype='real' name='[tip_amount]' role='dimension' type='ordinal' />
+      <column caption='Tips Segmentation' datatype='string' name='[tip_segment]' role='dimension' type='nominal' />
+      <column caption='Total Amount' datatype='real' name='[total_amount]' role='dimension' type='ordinal' />
+      <column caption='Trip Distance' datatype='real' name='[trip_distance]' role='dimension' type='ordinal' />
+      <column-instance column='[__tableau_internal_object_id__].[data.csv_654B210A05C945A48E297C4BBD468540]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[duration_min]' derivation='Avg' name='[avg:duration_min:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[earnings]' derivation='Avg' name='[avg:earnings:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Trips]' derivation='Count' name='[cnt:Trips:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[payment_type]' derivation='None' name='[none:payment_type:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp 1/#TableauTemp_010pyl61tcjsdi10tlf2n098skdq.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Trips</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Trips]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Trips</remote-alias>
+              <ordinal>0</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pickup_location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[pickup_location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pickup_location</remote-alias>
+              <ordinal>1</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>duration_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[duration_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>duration_min</remote-alias>
+              <ordinal>2</ordinal>
+              <family>data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3855</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour</remote-alias>
+              <ordinal>3</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tip_segment</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tip_segment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tip_segment</remote-alias>
+              <ordinal>4</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tip_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[tip_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tip_amount</remote-alias>
+              <ordinal>5</ordinal>
+              <family>data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1207</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fare_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fare_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fare_amount</remote-alias>
+              <ordinal>6</ordinal>
+              <family>data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>260</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trip_distance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[trip_distance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>trip_distance</remote-alias>
+              <ordinal>7</ordinal>
+              <family>data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1573</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_amount</remote-alias>
+              <ordinal>8</ordinal>
+              <family>data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2482</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>earnings</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[earnings]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>earnings</remote-alias>
+              <ordinal>9</ordinal>
+              <family>data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2642</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payment_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payment_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>payment_type</remote-alias>
+              <ordinal>10</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>passenger_count</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[passenger_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>passenger_count</remote-alias>
+              <ordinal>11</ordinal>
+              <family>data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' palette='blue_teal_10_0' type='palette'>
+            <map to='#3d50c3'>
+              <bucket>&quot;[federated.1788to201thfi110m531d0iuwgqu].[cnt:trips:qk]&quot;</bucket>
+            </map>
+            <map to='#3d50c3'>
+              <bucket>&quot;[federated.1788to201thfi110m531d0iuwgqu].[cnt:Trips:qk]&quot;</bucket>
+            </map>
+            <map to='#45a2b9'>
+              <bucket>&quot;[federated.1788to201thfi110m531d0iuwgqu]&quot;</bucket>
+            </map>
+            <map to='#b40326'>
+              <bucket>&quot;[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:payment_type:nk]' type='palette'>
+            <map to='#3d50c3'>
+              <bucket>&quot;Cash&quot;</bucket>
+            </map>
+            <map to='#b40326'>
+              <bucket>&quot;No charge&quot;</bucket>
+            </map>
+            <map to='#b4beee'>
+              <bucket>&quot;Credit card&quot;</bucket>
+            </map>
+            <map to='#e9beb3'>
+              <bucket>&quot;Dispute&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='data.csv' id='data.csv_654B210A05C945A48E297C4BBD468540'>
+            <properties context=''>
+              <relation connection='textscan.0wtth9i1oig7md1ar7ofe1553p0s' name='data.csv' table='[data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Trips' ordinal='0' />
+                  <column datatype='string' name='pickup_location' ordinal='1' />
+                  <column datatype='real' name='duration_min' ordinal='2' />
+                  <column datatype='integer' name='hour' ordinal='3' />
+                  <column datatype='string' name='tip_segment' ordinal='4' />
+                  <column datatype='real' name='tip_amount' ordinal='5' />
+                  <column datatype='real' name='fare_amount' ordinal='6' />
+                  <column datatype='real' name='trip_distance' ordinal='7' />
+                  <column datatype='real' name='total_amount' ordinal='8' />
+                  <column datatype='real' name='earnings' ordinal='9' />
+                  <column datatype='string' name='payment_type' ordinal='10' />
+                  <column datatype='real' name='passenger_count' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_F265A56A5586405CA3C153B3EDFD2CC6]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Drive Strategically by Time and Location' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Drive Strategically by Time and Location' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Average Earnings'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Average Earnings per Trip by Pickup Location and Hour</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/AverageEarnings?rev=' id='116979281' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data' name='federated.1788to201thfi110m531d0iuwgqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1788to201thfi110m531d0iuwgqu'>
+            <column-instance column='[earnings]' derivation='Avg' name='[avg:earnings:qk]' pivot='key' type='quantitative' />
+            <column caption='Earnings' datatype='real' name='[earnings]' role='dimension' type='ordinal' />
+            <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+            <column-instance column='[hour]' derivation='None' name='[none:hour:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[pickup_location]' derivation='None' name='[none:pickup_location:nk]' pivot='key' type='nominal' />
+            <column caption='Pickup Location' datatype='string' name='[pickup_location]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]' field-type='quantitative' major-origin='0' major-spacing='1' max='24' min='1' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]' scope='cols' value='Hour of Day' />
+            <format attr='auto-subtitle' class='0' field='[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]' scope='cols' value='true' />
+            <format attr='subtitle' class='0' field='[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]' scope='cols' value='' />
+            <format attr='height' field='[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]' value='45' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]' value='33' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]' value='100' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]' reverse='true' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#b40326</color>
+                <color>#ba213f</color>
+                <color>#c0425b</color>
+                <color>#c66478</color>
+                <color>#cc8996</color>
+                <color>#d2b0b7</color>
+                <color>#d9d9d9</color>
+                <color>#bcc0d5</color>
+                <color>#a1a8d1</color>
+                <color>#8791ce</color>
+                <color>#6d7aca</color>
+                <color>#5465c6</color>
+                <color>#3d50c3</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='size-bar' field='[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='border-style' id='annotation_2' value='solid' />
+            <format attr='border-color' id='annotation_2' value='#c7415c' />
+            <format attr='fill-color' id='annotation_2' value='#00000000' />
+            <format attr='border-width' id='annotation_2' value='4' />
+            <format attr='border-style' id='annotation_4' value='solid' />
+            <format attr='border-style' id='annotation_5' value='solid' />
+            <format attr='border-color' id='annotation_4' value='#c7415c' />
+            <format attr='border-color' id='annotation_5' value='#c7415c' />
+            <format attr='border-width' id='annotation_5' value='1' />
+            <format attr='border-width' id='annotation_4' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8570718765258789' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]</rows>
+        <cols>[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]</cols>
+        <annotations>
+          <annotation class='area' id='2' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='5.4344473007712084'>
+                  <node-reference>
+                    <axis>[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord cell-offset='0.878788'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Bronx&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='8.5385604113110531'>
+                  <node-reference>
+                    <axis>[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord cell-offset='0.0606061'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Manhattan&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Give the best earnings</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]</field>
+                      <field>[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]</field>
+                      <field>[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>46.888125000000002</value>
+                    <value>7</value>
+                    <value>&quot;Brooklyn&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='138' y='-25' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Earnings spiked</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]</field>
+                      <field>[federated.1788to201thfi110m531d0iuwgqu].[none:hour:qk]</field>
+                      <field>[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>43.700000000000003</value>
+                    <value>18</value>
+                    <value>&quot;Staten Island&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='0' y='-35' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{1D25B018-8E6C-4215-A614-DF83CAA39E5A}' />
+    </worksheet>
+    <worksheet name='Correlation'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Correlation With Tip Amount</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/Correlation?rev=' id='116979284' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2_tipCorr' name='federated.039zd1o08g8kv81gxqd1m1mfs3a7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.039zd1o08g8kv81gxqd1m1mfs3a7'>
+            <column datatype='real' name='[correlation_with_tip_amount]' role='measure' type='quantitative' />
+            <column-instance column='[variable]' derivation='None' name='[none:variable:nk]' pivot='key' type='nominal' />
+            <column-instance column='[correlation_with_tip_amount]' derivation='Sum' name='[sum:correlation_with_tip_amount:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[variable]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;duration_min&quot;' value='Trip duration' />
+                <alias key='&quot;fare_amount&quot;' value='Fare amount' />
+                <alias key='&quot;passenger_count&quot;' value='Count of passenger' />
+                <alias key='&quot;trip_distance&quot;' value='Trip distance' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[none:variable:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[sum:correlation_with_tip_amount:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[sum:correlation_with_tip_amount:qk]' scope='cols' value='Correlation' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[sum:correlation_with_tip_amount:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='border-color' id='annotation_0' value='#c7415c' />
+            <format attr='border-width' id='annotation_0' value='1' />
+            <format attr='border-style' id='annotation_0' value='solid' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[sum:correlation_with_tip_amount:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#3d50c3' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[none:variable:nk]</rows>
+        <cols>[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[sum:correlation_with_tip_amount:qk]</cols>
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run>Longer trips and higher fares correlated strongly with better tips
+ A passenger on a long ride is more likely to reward the driver well</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='0.26416211074315626'>
+                  <node-reference>
+                    <axis>[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[sum:correlation_with_tip_amount:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord cell-offset='0.0896057'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[none:variable:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;passenger_count&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='0.39972509200326456'>
+                  <node-reference>
+                    <axis>[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[sum:correlation_with_tip_amount:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord cell-offset='0.806452'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.039zd1o08g8kv81gxqd1m1mfs3a7].[none:variable:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;passenger_count&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{05718B11-8087-4D48-A19A-646755A7D690}' />
+    </worksheet>
+    <worksheet name='Efficiency'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Rate of Low-Efficiency Trips by Pickup Location and Hour</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/Efficiency?rev=' id='116979285' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='3_efficiency' name='federated.1tghnyf0btia3q1fl42610wbxiwx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1tghnyf0btia3q1fl42610wbxiwx'>
+            <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+            <column caption='Low Eff Rate' datatype='real' name='[low_eff_rate]' role='dimension' type='ordinal' />
+            <column-instance column='[hour]' derivation='None' name='[none:hour:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[pickup_location]' derivation='None' name='[none:pickup_location:nk]' pivot='key' type='nominal' />
+            <column caption='Pickup Location' datatype='string' name='[pickup_location]' role='dimension' type='nominal' />
+            <column-instance column='[low_eff_rate]' derivation='Sum' name='[sum:low_eff_rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:hour:qk]' scope='cols' value='Hour of Day' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:pickup_location:nk]' value='100' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1tghnyf0btia3q1fl42610wbxiwx].[sum:low_eff_rate:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#3d50c3</color>
+                <color>#5465c6</color>
+                <color>#6d7aca</color>
+                <color>#8791ce</color>
+                <color>#a1a8d1</color>
+                <color>#bcc0d5</color>
+                <color>#d9d9d9</color>
+                <color>#d2b0b7</color>
+                <color>#cc8996</color>
+                <color>#c66478</color>
+                <color>#c0425b</color>
+                <color>#ba213f</color>
+                <color>#b40326</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_1' value='#00000000' />
+            <format attr='border-style' id='annotation_1' value='solid' />
+            <format attr='border-width' id='annotation_1' value='4' />
+            <format attr='border-color' id='annotation_1' value='#c7415c' />
+            <format attr='border-style' id='annotation_2' value='solid' />
+            <format attr='border-color' id='annotation_2' value='#c7415c' />
+            <format attr='stroke-size' id='annotation_2' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1tghnyf0btia3q1fl42610wbxiwx].[sum:low_eff_rate:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.1270718574523926' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:pickup_location:nk]</rows>
+        <cols>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:hour:qk]</cols>
+        <annotations>
+          <annotation class='area' id='1' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='0.14456521739130435'>
+                  <node-reference>
+                    <axis>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:hour:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord cell-offset='0.234862'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:pickup_location:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Bronx&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='24.620652173913044'>
+                  <node-reference>
+                    <axis>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:hour:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord cell-offset='0.748624'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:pickup_location:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Bronx&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='32.0156' text-width='427'>
+            <formatted-text>
+              <run bold='true' fontalignment='1'>These low-efficiency trips often occurred in the Bronx and Brooklyn during early hours.</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run bold='true' fontalignment='1'>(They looked productive, but weren’t profitable.)</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:hour:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:pickup_location:nk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:hour:qk]</field>
+                      <field>[federated.1tghnyf0btia3q1fl42610wbxiwx].[none:pickup_location:nk]</field>
+                      <field>[federated.1tghnyf0btia3q1fl42610wbxiwx].[sum:low_eff_rate:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>12</value>
+                    <value>&quot;Bronx&quot;</value>
+                    <value>0.52380952380952384</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-1' y='76' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{8921F6E8-CC51-41DB-8944-5991A9E20D55}' />
+    </worksheet>
+    <worksheet name='Payment Type'>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/PaymentType?rev=' id='116979287' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data' name='federated.1788to201thfi110m531d0iuwgqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1788to201thfi110m531d0iuwgqu'>
+            <column-instance column='[__tableau_internal_object_id__].[data.csv_654B210A05C945A48E297C4BBD468540]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]' pivot='key' type='quantitative' />
+            <column caption='data.csv' datatype='table' name='[__tableau_internal_object_id__].[data.csv_654B210A05C945A48E297C4BBD468540]' role='measure' type='quantitative' />
+            <column-instance column='[payment_type]' derivation='None' name='[none:payment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tip_segment]' derivation='None' name='[none:tip_segment:nk]' pivot='key' type='nominal' />
+            <column caption='Payment Type' datatype='string' name='[payment_type]' role='dimension' type='nominal' />
+            <column caption='Tips Segmentation' datatype='string' name='[tip_segment]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1788to201thfi110m531d0iuwgqu].[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1788to201thfi110m531d0iuwgqu].[none:tip_segment:nk]</rows>
+        <cols>[federated.1788to201thfi110m531d0iuwgqu].[none:payment_type:nk]</cols>
+      </table>
+      <simple-id uuid='{91600B3C-D628-403A-BCCD-B5C8B6352A66}' />
+    </worksheet>
+    <worksheet name='Payment Type (Bar)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Payment Type by Tip Segment</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/PaymentTypeBar?rev=' id='116979286' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data' name='federated.1788to201thfi110m531d0iuwgqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1788to201thfi110m531d0iuwgqu'>
+            <column-instance column='[__tableau_internal_object_id__].[data.csv_654B210A05C945A48E297C4BBD468540]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]' pivot='key' type='quantitative' />
+            <column caption='data.csv' datatype='table' name='[__tableau_internal_object_id__].[data.csv_654B210A05C945A48E297C4BBD468540]' role='measure' type='quantitative' />
+            <column-instance column='[payment_type]' derivation='None' name='[none:payment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tip_segment]' derivation='None' name='[none:tip_segment:nk]' pivot='key' type='nominal' />
+            <column caption='Payment Type' datatype='string' name='[payment_type]' role='dimension' type='nominal' />
+            <column caption='Tips Segmentation' datatype='string' name='[tip_segment]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1788to201thfi110m531d0iuwgqu].[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]' scope='cols' value='Count of trips' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1788to201thfi110m531d0iuwgqu].[none:tip_segment:nk]' value='120' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1788to201thfi110m531d0iuwgqu].[none:tip_segment:nk]' value='true' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1788to201thfi110m531d0iuwgqu].[none:payment_type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1788to201thfi110m531d0iuwgqu].[none:tip_segment:nk]</rows>
+        <cols>[federated.1788to201thfi110m531d0iuwgqu].[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]</cols>
+      </table>
+      <simple-id uuid='{3E8A9376-14D6-44D0-8660-F2CE2D614A67}' />
+    </worksheet>
+    <worksheet name='Shorter and more consistent trips'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Trips Detail Comparition</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/Shorterandmoreconsistenttrips?rev=' id='116979282' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data' name='federated.1788to201thfi110m531d0iuwgqu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1788to201thfi110m531d0iuwgqu'>
+            <column-instance column='[__tableau_internal_object_id__].[data.csv_654B210A05C945A48E297C4BBD468540]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]' pivot='key' type='quantitative' />
+            <column caption='data.csv' datatype='table' name='[__tableau_internal_object_id__].[data.csv_654B210A05C945A48E297C4BBD468540]' role='measure' type='quantitative' />
+            <column-instance column='[duration_min]' derivation='Avg' name='[avg:duration_min:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[earnings]' derivation='Avg' name='[avg:earnings:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[trip_distance]' derivation='Avg' name='[avg:trip_distance:qk]' pivot='key' type='quantitative' />
+            <column caption='Duration Min' datatype='real' name='[duration_min]' role='dimension' type='ordinal' />
+            <column caption='Earnings' datatype='real' name='[earnings]' role='dimension' type='ordinal' />
+            <column-instance column='[pickup_location]' derivation='None' name='[none:pickup_location:nk]' pivot='key' type='nominal' />
+            <column caption='Pickup Location' datatype='string' name='[pickup_location]' role='dimension' type='nominal' />
+            <column caption='Trip Distance' datatype='real' name='[trip_distance]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1788to201thfi110m531d0iuwgqu].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1788to201thfi110m531d0iuwgqu].[avg:trip_distance:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1788to201thfi110m531d0iuwgqu].[avg:duration_min:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1788to201thfi110m531d0iuwgqu].[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1788to201thfi110m531d0iuwgqu].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1788to201thfi110m531d0iuwgqu].[avg:trip_distance:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1788to201thfi110m531d0iuwgqu].[avg:duration_min:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1788to201thfi110m531d0iuwgqu].[__tableau_internal_object_id__].[cnt:data.csv_654B210A05C945A48E297C4BBD468540:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1788to201thfi110m531d0iuwgqu].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1788to201thfi110m531d0iuwgqu].[avg:duration_min:qk]' value='n#,##0.00' />
+            <format attr='text-format' field='[federated.1788to201thfi110m531d0iuwgqu].[avg:trip_distance:qk]' value='n#,##0.00' />
+            <format attr='text-format' field='[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]' value='c#,##0.00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1788to201thfi110m531d0iuwgqu].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1788to201thfi110m531d0iuwgqu].[none:pickup_location:nk]</rows>
+        <cols>[federated.1788to201thfi110m531d0iuwgqu].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{C194737C-8819-46F8-9348-2A426DB9ADAF}' />
+    </worksheet>
+    <worksheet name='Staten Island'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Staten Island</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/StatenIsland?rev=' id='116979283' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='1_staten_hourly' name='federated.0vg194u1piduqb13j1ze211vjty9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0vg194u1piduqb13j1ze211vjty9'>
+            <column-instance column='[avg_earnings]' derivation='Avg' name='[avg:avg_earnings:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[trip_count]' derivation='Avg' name='[avg:trip_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Earnings' datatype='real' name='[avg_earnings]' role='dimension' type='ordinal' />
+            <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+            <column-instance column='[hour]' derivation='None' name='[none:hour:qk]' pivot='key' type='quantitative' />
+            <column caption='Trip' datatype='integer' name='[trip_count]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0vg194u1piduqb13j1ze211vjty9].[none:hour:qk]' value='42' />
+            <format attr='width' field='[federated.0vg194u1piduqb13j1ze211vjty9].[avg:avg_earnings:qk]' value='40' />
+            <format attr='title' class='0' field='[federated.0vg194u1piduqb13j1ze211vjty9].[avg:avg_earnings:qk]' scope='rows' value='Avg. Earnings ($)' />
+            <encoding attr='space' class='0' field='[federated.0vg194u1piduqb13j1ze211vjty9].[avg:trip_count:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='width' field='[federated.0vg194u1piduqb13j1ze211vjty9].[avg:trip_count:qk]' value='40' />
+            <format attr='title' class='0' field='[federated.0vg194u1piduqb13j1ze211vjty9].[avg:trip_count:qk]' scope='rows' value='Count of Trip' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='border-style' id='annotation_2' value='solid' />
+            <format attr='border-color' id='annotation_2' value='#c7415c' />
+            <format attr='border-width' id='annotation_2' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0vg194u1piduqb13j1ze211vjty9].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='line-interpolation' value='linear' />
+                <format attr='mark-transparency' value='129' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='10' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vg194u1piduqb13j1ze211vjty9].[avg:avg_earnings:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0vg194u1piduqb13j1ze211vjty9].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='line-interpolation' value='linear' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-markers-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='11' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0vg194u1piduqb13j1ze211vjty9].[avg:trip_count:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0vg194u1piduqb13j1ze211vjty9].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='line-interpolation' value='linear' />
+                <format attr='mark-transparency' value='129' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0vg194u1piduqb13j1ze211vjty9].[avg:avg_earnings:qk] + [federated.0vg194u1piduqb13j1ze211vjty9].[avg:trip_count:qk])</rows>
+        <cols>[federated.0vg194u1piduqb13j1ze211vjty9].[none:hour:qk]</cols>
+        <annotations>
+          <annotation class='point' id='2' mark-position='1' pullback='0' text-width='219'>
+            <formatted-text>
+              <run bold='true'>Earnings spiked at 6 PM</run>
+              <run>Æ&#10;</run>
+              <run bold='true'>Fewer rides but high-value ones</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='17.939849624060152'>
+                  <node-reference>
+                    <axis>[federated.0vg194u1piduqb13j1ze211vjty9].[none:hour:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='43.991589113257241'>
+                  <node-reference>
+                    <axis>[federated.0vg194u1piduqb13j1ze211vjty9].[avg:avg_earnings:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='-139' y='38' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{5D4E43FA-8159-4291-B4FF-01BB6647F8E0}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Cash Isn’t Always King'>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/CashIsntAlwaysKing?rev=' id='116979291' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <style />
+      <size maxheight='768' maxwidth='1024' minheight='768' minwidth='1024' preset-index='2' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='65' param='horz' type-v2='layout-flow' w='98438' x='781' y='1042'>
+            <zone h='97916' id='18' type-v2='layout-basic' w='98438' x='781' y='1042'>
+              <zone forceUpdate='true' h='10547' id='9' type-v2='text' w='98438' x='781' y='1042'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontcolor='#ffeee9' fontsize='24'>Cash Isn’t Always King</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#302d80' />
+                </zone-style>
+              </zone>
+              <zone h='68619' id='63' name='Payment Type (Bar)' w='98438' x='781' y='11589'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18750' id='72' name='Payment Type' w='61133' x='781' y='80208'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='18750' id='75' type-v2='text' w='37305' x='61914' y='80208'>
+                <formatted-text>
+                  <run fontalignment='2' fontcolor='#000000' fontsize='10'>Credit card payments were dominant in high-tip segments</run>
+                  <run fontalignment='2'>Æ&#10;</run>
+                  <run fontalignment='2' fontcolor='#000000' fontsize='10'>while cash users made up most low-tip trips</run>
+                  <run fontalignment='2'>Æ&#10;</run>
+                  <run fontalignment='2' fontcolor='#000000' fontsize='10'>often early in the day.</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#c7415c' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='2' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='13542' id='66' name='Payment Type (Bar)' pane-specification-id='0' param='[federated.1788to201thfi110m531d0iuwgqu].[none:payment_type:nk]' type-v2='color' w='13672' x='82129' y='50911' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='117' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='116' param='vert' type-v2='layout-flow' w='98438' x='781' y='1042'>
+                <zone forceUpdate='true' h='10547' id='9' type-v2='text' w='98438' x='781' y='1042'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#ffeee9' fontsize='24'>Cash Isn’t Always King</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#302d80' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='68619' id='63' is-fixed='true' name='Payment Type (Bar)' w='98438' x='781' y='11589'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13542' id='66' name='Payment Type (Bar)' pane-specification-id='0' param='[federated.1788to201thfi110m531d0iuwgqu].[none:payment_type:nk]' type-v2='color' w='13672' x='82129' y='50911'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='136' h='18750' id='72' is-fixed='true' name='Payment Type' w='61133' x='781' y='80208'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='18750' id='75' type-v2='text' w='37305' x='61914' y='80208'>
+                  <formatted-text>
+                    <run fontalignment='2' fontcolor='#000000' fontsize='10'>Credit card payments were dominant in high-tip segments</run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run fontalignment='2' fontcolor='#000000' fontsize='10'>while cash users made up most low-tip trips</run>
+                    <run fontalignment='2'>Æ&#10;</run>
+                    <run fontalignment='2' fontcolor='#000000' fontsize='10'>often early in the day.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#c7415c' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#ffffff' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6D091595-7F6F-48DD-ABB3-B8951E37419C}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Drive Strategically by Time and Location'>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/DriveStrategicallybyTimeandLocation?rev=' id='116979288' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <style />
+      <size maxheight='768' maxwidth='1024' minheight='768' minwidth='1024' preset-index='2' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='24' param='horz' type-v2='layout-flow' w='98438' x='781' y='1042'>
+            <zone h='97916' id='18' type-v2='layout-basic' w='98438' x='781' y='1042'>
+              <zone forceUpdate='true' h='10562' id='9' type-v2='text' w='98438' x='781' y='1042'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontcolor='#ffeee9' fontsize='24'>Chasing the Golden Hours</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#302d80' />
+                </zone-style>
+              </zone>
+              <zone h='36964' id='15' name='Average Earnings' w='98438' x='781' y='11604'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='50390' id='21' param='horz' type-v2='layout-flow' w='98438' x='781' y='48568'>
+                <zone fixed-size='408' h='50390' id='28' is-fixed='true' name='Shorter and more consistent trips' w='40625' x='781' y='48568'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='50390' id='22' name='Staten Island' w='57813' x='41406' y='48568'>
+                  <layout-cache minwidth='182' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='margin-right' value='4' />
+                    <format attr='margin-left' value='12' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone fixed-size='58' h='7682' id='25' is-fixed='true' name='Staten Island' pane-specification-id='10' param='[federated.0vg194u1piduqb13j1ze211vjty9].[:Measure Names]' type-v2='color' w='17480' x='47168' y='55469' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='111' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='110' param='vert' type-v2='layout-flow' w='98438' x='781' y='1042'>
+                <zone forceUpdate='true' h='10562' id='9' type-v2='text' w='98438' x='781' y='1042'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#ffeee9' fontsize='24'>Chasing the Golden Hours</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#302d80' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='276' h='36964' id='15' is-fixed='true' name='Average Earnings' w='98438' x='781' y='11604'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50390' id='28' is-fixed='true' name='Shorter and more consistent trips' w='40625' x='781' y='48568'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50390' id='22' is-fixed='true' name='Staten Island' w='57813' x='41406' y='48568'>
+                  <layout-cache minwidth='182' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='58' h='7682' id='25' name='Staten Island' pane-specification-id='10' param='[federated.0vg194u1piduqb13j1ze211vjty9].[:Measure Names]' type-v2='color' w='17480' x='47168' y='55469'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#ffffff' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{26B94D3E-77FD-4287-949B-CA884EEC9E42}' />
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <style />
+      <size maxheight='868' maxwidth='1024' minheight='868' minwidth='1024' preset-index='17' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='7' param='vert' removable='false' type-v2='layout-flow' w='98438' x='781' y='1042'>
+            <zone h='97916' id='1' param='vert' removable='false' type-v2='layout-flow' w='98438' x='781' y='1042'>
+              <zone h='13151' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98438' x='781' y='1042' />
+              <zone h='84765' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98438' x='781' y='14193'>
+                <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                  <story-points>
+                    <story-point caption='Drive Strategically by Time and Location' captured-sheet='Drive Strategically by Time and Location' id='1' />
+                  </story-points>
+                </flipboard>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{BF9102B5-A605-4C46-8779-6B124AD175B4}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='The Hidden Cost of “Busy”'>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/TheHiddenCostofBusy?rev=' id='116979290' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <style />
+      <size maxheight='768' maxwidth='1024' minheight='768' minwidth='1024' preset-index='2' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='62' param='horz' type-v2='layout-flow' w='98438' x='781' y='1042'>
+            <zone h='97916' id='18' type-v2='layout-basic' w='98438' x='781' y='1042'>
+              <zone forceUpdate='true' h='10547' id='9' type-v2='text' w='98438' x='781' y='1042'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontcolor='#ffeee9' fontsize='24'>The Hidden Cost of “Busy”</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#302d80' />
+                </zone-style>
+              </zone>
+              <zone h='87369' id='60' name='Efficiency' w='98438' x='781' y='11589'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='9896' id='63' name='Efficiency' pane-specification-id='0' param='[federated.1tghnyf0btia3q1fl42610wbxiwx].[sum:low_eff_rate:qk]' type-v2='color' w='13672' x='84570' y='12109' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='111' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='110' param='vert' type-v2='layout-flow' w='98438' x='781' y='1042'>
+                <zone forceUpdate='true' h='10547' id='9' type-v2='text' w='98438' x='781' y='1042'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#ffeee9' fontsize='24'>The Hidden Cost of “Busy”</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#302d80' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='87369' id='60' is-fixed='true' name='Efficiency' w='98438' x='781' y='11589'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9896' id='63' name='Efficiency' pane-specification-id='0' param='[federated.1tghnyf0btia3q1fl42610wbxiwx].[sum:low_eff_rate:qk]' type-v2='color' w='13672' x='84570' y='12109'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#ffffff' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{7C3F99BD-1BA5-40E0-AAD9-EAAD597F0F41}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='What Really Drives Tips?'>
+      <repository-location derived-from='http://localhost:9100/workbooks/Capstone2_17478414273750/WhatReallyDrivesTips?rev=' id='116979289' path='/workbooks/Capstone2_17478414273750' revision='' />
+      <style />
+      <size maxheight='768' maxwidth='1024' minheight='768' minwidth='1024' preset-index='2' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='10547' id='24' param='horz' type-v2='layout-flow' w='98438' x='781' y='1042'>
+            <zone h='10547' id='18' type-v2='layout-basic' w='98438' x='781' y='1042'>
+              <zone forceUpdate='true' h='10547' id='9' type-v2='text' w='98438' x='781' y='1042'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontcolor='#ffeee9' fontsize='24'>What Really Drives Tips?</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#302d80' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='87369' id='51' name='Correlation' w='98438' x='781' y='11589'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='107' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='106' param='vert' type-v2='layout-flow' w='98438' x='781' y='1042'>
+                <zone forceUpdate='true' h='10547' id='9' type-v2='text' w='98438' x='781' y='1042'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#ffeee9' fontsize='24'>What Really Drives Tips?</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#302d80' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='87369' id='51' is-fixed='true' name='Correlation' w='98438' x='781' y='11589'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#ffffff' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{018D920D-F580-4546-9FA8-0F93C5D68E70}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' name='Average Earnings' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1788to201thfi110m531d0iuwgqu].[avg:earnings:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <floating-toolbar-visibility value='2' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{97E9B845-07E7-4FFA-B969-8FF8DB152D85}' />
+    </window>
+    <window class='worksheet' name='Shorter and more consistent trips' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{9BC06DC3-DFE5-408E-8026-55CFA554E06B}' />
+    </window>
+    <window class='worksheet' name='Staten Island' tab-color='#4f779a'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='10' param='[federated.0vg194u1piduqb13j1ze211vjty9].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A9043D16-236E-4E98-9E8D-61B852873382}' />
+    </window>
+    <window class='worksheet' name='Correlation' tab-color='#f66273'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{FF594353-F5D4-45D6-9A76-85D020CD92CC}' />
+    </window>
+    <window class='worksheet' name='Efficiency' tab-color='#dec77b'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1tghnyf0btia3q1fl42610wbxiwx].[sum:low_eff_rate:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A419CD8D-2770-4B97-A911-76D1AEB7B1FC}' />
+    </window>
+    <window class='worksheet' name='Payment Type (Bar)' tab-color='#a65200'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1788to201thfi110m531d0iuwgqu].[none:payment_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4F134FBB-575B-4FC3-AC10-E25FEA685747}' />
+    </window>
+    <window class='worksheet' name='Payment Type' tab-color='#a65200'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{00FC62F9-079E-4EAC-83C6-D72365A27222}' />
+    </window>
+    <window class='dashboard' name='Drive Strategically by Time and Location' tab-color='#72bcbb'>
+      <viewpoints>
+        <viewpoint name='Average Earnings'>
+          <zoom type='fit-width' />
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+        <viewpoint name='Shorter and more consistent trips'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Staten Island'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='9' />
+      <simple-id uuid='{3AFFA0D9-E613-4798-9431-6E3DD2F0F481}' />
+    </window>
+    <window class='dashboard' name='What Really Drives Tips?' tab-color='#72bcbb'>
+      <viewpoints>
+        <viewpoint name='Correlation'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='51' />
+      <simple-id uuid='{2E310834-B72C-438E-A62A-84460896BD2C}' />
+    </window>
+    <window class='dashboard' name='The Hidden Cost of “Busy”' tab-color='#72bcbb'>
+      <viewpoints>
+        <viewpoint name='Efficiency'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='60' />
+      <simple-id uuid='{27EF1BB3-F35E-4C14-94CE-0C7C064D3277}' />
+    </window>
+    <window class='dashboard' name='Cash Isn’t Always King' tab-color='#72bcbb'>
+      <viewpoints>
+        <viewpoint name='Payment Type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Payment Type (Bar)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='63' />
+      <simple-id uuid='{9AC70698-6459-4BD6-92BD-873E47B685FB}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='4' />
+      <simple-id uuid='{2E6132FB-3A62-4D17-929A-0474F168152D}' />
+    </window>
+  </windows>
+</workbook>

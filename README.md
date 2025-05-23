@@ -54,4 +54,4 @@ This project explores over 60,000 NYC taxi trips to uncover patterns in earnings
 ## ✍️ Author
 
 Christian (Chrata)\
-📅 May 2025
+May 2025
